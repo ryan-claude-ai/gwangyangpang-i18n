@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>광양행운팡팡 | Gwangyang Lucky PangPang</title>
+<meta name="description" content="광양 행사·음식점·숙박·관광지·특산물 안내 (한국어 / English / 中文 / 日本語)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&family=Noto+Serif+KR:wght@700;900&family=Noto+Sans+SC:wght@400;700&family=Noto+Sans+JP:wght@400;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app" id="app">
+  <!-- 시안 표시: 정식 서비스로 전환할 때 삭제 -->
+  <p class="proto">디자인 시안 · 실제 서비스가 아닙니다 · Prototype, not the official site</p>
+  <header class="topbar" id="topbar" hidden>
+    <a class="brand" href="#/home"><span id="brandName">광양행운팡팡</span><small>GWANGYANG</small></a>
+    <button class="chip" id="langChip" type="button">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></svg>
+      <span id="langName"></span>
+    </button>
+  </header>
+  <nav class="catnav" id="catnav" hidden></nav>
+
+  <main id="view"></main>
+
+  <footer class="footer" id="footer" hidden></footer>
+  <nav class="tabbar" id="tabbar" hidden></nav>
+
+  <div class="stamp-layer" id="stampLayer" aria-live="assertive">
+    <div class="stamp" id="stamp"><b>PANG!</b><span id="stampText"></span><em>LUCKY PANGPANG</em></div>
+  </div>
+</div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

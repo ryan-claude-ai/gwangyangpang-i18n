@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>광양행운팡팡 - 언어 선택</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&family=Noto+Sans+SC:wght@500;700&family=Noto+Sans+JP:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --plum: #6a2c91;       /* 행운팡팡 로고 보라 */
+  --plum-dark: #3e1557;
+  --blossom: #f4a7c0;    /* 매화 분홍 */
+  --blossom-soft: #fde8ef;
+  --ink: #1f1a24;
+  --muted: #6e6676;
+  --card: #ffffff;
+  --page: #f6f2f8;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+body {
+  font-family: "Noto Sans KR", "Noto Sans SC", "Noto Sans JP", sans-serif;
+  background: var(--page);
+  color: var(--ink);
+  display: flex; justify-content: center;
+}
+.app { width: 100%; max-width: 480px; min-height: 100%; background: var(--card); position: relative; overflow: hidden; }
+
+/* ---------- 1. 언어 선택 화면 ---------- */
+#select { display: flex; flex-direction: column; min-height: 100vh; min-height: 100dvh; }
+.hero {
+  position: relative; height: 42vh; min-height: 260px; max-height: 380px;
+  /* 기존 메인 사진은 한글 문구가 이미지에 박혀 있어 쓰지 않음 */
+  background:
+    radial-gradient(circle at 85% 20%, rgba(244,167,192,.55) 0 18%, transparent 19%),
+    radial-gradient(circle at 15% 75%, rgba(244,167,192,.35) 0 12%, transparent 13%),
+    linear-gradient(160deg, #8a3fb8 0%, var(--plum) 45%, var(--plum-dark) 100%);
+  display: flex; flex-direction: column; justify-content: space-between; padding: 20px 20px 44px;
+}
+.hero::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(62,21,87,.35) 0%, rgba(62,21,87,.15) 45%, rgba(62,21,87,.85) 100%);
+}
+.hero > * { position: relative; z-index: 1; }
+.logo { align-self: flex-start; background: #fff; color: var(--plum); border-radius: 999px; padding: 6px 14px; font-size: 14px; font-weight: 900; line-height: 1.2; }
+.logo small { font-size: 11px; font-weight: 700; color: var(--muted); margin-left: 4px; }
+.hero h1 { color: #fff; font-size: 30px; font-weight: 900; letter-spacing: -0.02em; line-height: 1.2; }
+.hero h1 small { display: block; font-size: 14px; font-weight: 400; opacity: .9; letter-spacing: .02em; margin-top: 6px; }
+.petal { position: absolute; z-index: 1; width: 14px; height: 14px; background: var(--blossom); border-radius: 80% 0 80% 0; opacity: .85; animation: fall 9s linear infinite; }
+@keyframes fall { 0% { transform: translateY(-20px) rotate(0); } 100% { transform: translateY(420px) rotate(360deg); opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .petal { display: none; } }
+
+.panel {
+  flex: 1; margin-top: -24px; position: relative; z-index: 2;
+  background: var(--card); border-radius: 24px 24px 0 0; padding: 28px 20px 24px;
+}
+.prompt { text-align: center; margin-bottom: 22px; }
+.prompt b { display: block; font-size: 18px; }
+.prompt span { display: block; font-size: 13px; color: var(--muted); margin-top: 6px; line-height: 1.6; }
+
+.langs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.lang {
+  display: flex; flex-direction: column; align-items: flex-start; gap: 4px;
+  min-height: 92px; padding: 16px; border-radius: 16px; cursor: pointer;
+  border: 2px solid #ece6f0; background: #faf8fb; text-align: left; font: inherit; color: inherit;
+  transition: border-color .15s, background .15s, transform .1s;
+}
+.lang:hover { border-color: var(--blossom); background: var(--blossom-soft); }
+.lang:active { transform: scale(.98); }
+.lang:focus-visible { outline: 3px solid var(--plum); outline-offset: 2px; }
+.lang .code { font-size: 12px; font-weight: 700; color: var(--plum); letter-spacing: .08em; }
+.lang .name { font-size: 21px; font-weight: 700; }
+.lang .sub { font-size: 12px; color: var(--muted); }
+.lang[lang="zh-Hans"] .name { font-family: "Noto Sans SC", sans-serif; }
+.lang[lang="ja"] .name { font-family: "Noto Sans JP", sans-serif; }
+.lang.current { border-color: var(--plum); background: #f3ecf8; }
+
+.foot { text-align: center; font-size: 11px; color: #a39bab; padding: 18px 0 4px; }
+
+/* ---------- 2. 선택 후 메인 미리보기 ---------- */
+#main { display: none; min-height: 100vh; }
+.topbar { display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; border-bottom: 1px solid #eee; }
+.topbar img { height: 30px; }
+.chip {
+  display: inline-flex; align-items: center; gap: 6px; font: inherit; font-size: 13px; font-weight: 700;
+  padding: 7px 12px; border-radius: 999px; border: 1.5px solid var(--plum); color: var(--plum); background: #fff; cursor: pointer;
+}
+.menu { display: flex; overflow-x: auto; border-bottom: 1px solid #eee; scrollbar-width: none; }
+.menu a { flex: 1 0 auto; text-align: center; padding: 13px 12px; font-size: 14px; font-weight: 700; color: #444; text-decoration: none; white-space: nowrap; }
+.menu a:first-child { color: var(--plum); box-shadow: inset 0 -3px 0 var(--plum); }
+.banner { height: 200px; display: flex; align-items: center; justify-content: center; text-align: center; padding: 20px;
+  background: repeating-linear-gradient(45deg, #efe7f4 0 12px, #f7f2fa 12px 24px); color: var(--plum); font-size: 13px; font-weight: 700; line-height: 1.6; }
+.notice { margin: 16px; padding: 14px 16px; border-radius: 12px; background: var(--blossom-soft); font-size: 13px; line-height: 1.6; color: #6b3350; }
+.notice b { display: block; margin-bottom: 4px; }
+.footer { padding: 18px 16px 30px; font-size: 12px; color: #888; line-height: 1.7; background: #f5f5f5; }
+</style>
+</head>
+<body>
+<div class="app">
+
+  <!-- 1. 언어 선택 (QR 스캔 후 처음 보이는 화면) -->
+  <section id="select" aria-labelledby="select-title">
+    <div class="hero">
+      <span class="logo">광양행운팡팡<small>Lucky PangPang</small></span>
+      <h1 id="select-title">광양에 오신 것을<br>환영합니다
+        <small>Welcome to Gwangyang · 欢迎来到光阳 · 光陽へようこそ</small>
+      </h1>
+    </div>
+
+    <div class="panel">
+      <div class="prompt">
+        <b>언어를 선택해 주세요</b>
+        <span>Select your language · 请选择语言 · 言語を選択してください</span>
+      </div>
+
+      <div class="langs" role="list">
+        <button class="lang" lang="ko" data-lang="ko" role="listitem"><span class="code">KO</span><span class="name">한국어</span><span class="sub">Korean</span></button>
+        <button class="lang" lang="en" data-lang="en" role="listitem"><span class="code">EN</span><span class="name">English</span><span class="sub">영어</span></button>
+        <button class="lang" lang="zh-Hans" data-lang="zh" role="listitem"><span class="code">ZH</span><span class="name">简体中文</span><span class="sub">Chinese</span></button>
+        <button class="lang" lang="ja" data-lang="ja" role="listitem"><span class="code">JA</span><span class="name">日本語</span><span class="sub">Japanese</span></button>
+      </div>
+
+      <p class="foot">언어는 화면 위쪽에서 언제든 바꿀 수 있어요 · You can change this anytime</p>
+    </div>
+  </section>
+
+  <!-- 2. 선택 후 메인 화면 (번역 적용 미리보기) -->
+  <section id="main" aria-live="polite">
+    <div class="topbar">
+      <b style="color:var(--plum);font-weight:900">광양행운팡팡</b>
+      <button class="chip" id="change"><span aria-hidden="true">🌐</span><span id="cur"></span></button>
+    </div>
+    <nav class="menu" id="menu"></nav>
+    <div class="banner">언어별 메인 배너 자리<br>(기존 배너는 한글이 이미지에 들어 있어 새로 제작 필요)</div>
+    <div class="notice" id="notice"></div>
+    <div class="footer" id="footer"></div>
+  </section>
+
+</div>
+
+<script>
+// 번역 목록 엑셀(1_화면문구)의 초벌 번역 일부. 실제 적용 시 lang/*.json 또는 PHP 배열로 분리
+var T = {
+  ko: { name: '한국어', menu: ['행사안내', '음식점', '숙박', '관광지', '특산물'],
+        noticeT: '"행운팡팡" 포인트 적립', notice: '관광지 내에서 행운팡팡 QR코드를 스캔하면 행운의 포인트를 받습니다.',
+        footer: '본 사이트의 정보는 업체 및 기관의 사정에 따라 변경될 수 있습니다.' },
+  en: { name: 'English', menu: ['Events', 'Restaurants', 'Stay', 'Attractions', 'Local Specialties'],
+        noticeT: 'Earn Lucky PangPang Points', notice: 'Scan a Lucky PangPang QR code at tourist sites to receive lucky points.',
+        footer: 'Information on this site may change depending on the circumstances of businesses and organizations.' },
+  zh: { name: '简体中文', menu: ['活动信息', '美食', '住宿', '景点', '特产'],
+        noticeT: '幸运砰砰积分累积', notice: '在景点内扫描幸运砰砰二维码，即可获得幸运积分。',
+        footer: '本网站信息可能因商家及机构情况而有所变动。' },
+  ja: { name: '日本語', menu: ['イベント情報', 'グルメ', '宿泊', '観光スポット', '特産品'],
+        noticeT: 'ラッキーパンパン ポイント獲得', notice: '観光地内でラッキーパンパンのQRコードをスキャンすると、ラッキーポイントがもらえます。',
+        footer: '本サイトの情報は、事業者・機関の都合により変更される場合があります。' }
+};
+var HTML_LANG = { ko: 'ko', en: 'en', zh: 'zh-Hans', ja: 'ja' };
+
+function save(lang) { try { localStorage.setItem('gy_lang', lang); } catch (e) {} }
+function load() { try { return localStorage.getItem('gy_lang'); } catch (e) { return null; } }
+
+function show(lang) {
+  var t = T[lang];
+  document.documentElement.lang = HTML_LANG[lang];
+  document.getElementById('cur').textContent = t.name;
+  document.getElementById('menu').innerHTML = t.menu.map(function (m) { return '<a href="#">' + m + '</a>'; }).join('');
+  document.getElementById('notice').innerHTML = '<b>' + t.noticeT + '</b>' + t.notice;
+  document.getElementById('footer').textContent = t.footer;
+  document.getElementById('select').style.display = 'none';
+  document.getElementById('main').style.display = 'block';
+  window.scrollTo(0, 0);
+}
+
+function openSelect() {
+  var cur = load();
+  document.querySelectorAll('.lang').forEach(function (b) { b.classList.toggle('current', b.dataset.lang === cur); });
+  document.getElementById('main').style.display = 'none';
+  document.getElementById('select').style.display = 'flex';
+}
+
+document.querySelectorAll('.lang').forEach(function (b) {
+  b.addEventListener('click', function () { save(b.dataset.lang); show(b.dataset.lang); });
+});
+document.getElementById('change').addEventListener('click', openSelect);
+
+// 매화 꽃잎 효과
+(function () {
+  var hero = document.querySelector('.hero');
+  for (var i = 0; i < 7; i++) {
+    var p = document.createElement('span');
+    p.className = 'petal';
+    p.style.left = (8 + Math.random() * 84) + '%';
+    p.style.animationDelay = (-Math.random() * 9) + 's';
+    p.style.transform = 'scale(' + (0.6 + Math.random() * 0.6) + ')';
+    hero.appendChild(p);
+  }
+})();
+
+// 시안 확인용: 항상 선택 화면부터 보여줌 (실제 적용 시 저장된 언어가 있으면 바로 show(load()) 가능)
+openSelect();
+</script>
+</body>
+</html>

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>광양행운팡팡 - 언어 선택</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&family=Noto+Serif+KR:wght@700;900&family=Noto+Sans+SC:wght@700&family=Noto+Sans+JP:wght@700&family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+/*
+  컨셉: "행운 티켓"
+  - 축제 입장권/스탬프 투어 감성: 언어 버튼을 티켓으로, 선택하면 행운 도장이 "팡!" 찍힘
+  - 색: 매화(분홍), 청매실(초록), 섬진강(파랑), 동백(빨강) + 한지 느낌의 크림 배경
+*/
+:root {
+  --paper: #fbf5ea;
+  --paper-2: #f3e9d6;
+  --ink: #2a1d2e;
+  --muted: #7d6f78;
+  --plum: #6a2c91;
+  --blossom: #ef7fa5;
+  --blossom-soft: #fde3ec;
+  --maesil: #4f9a5c;
+  --river: #2f7fb8;
+  --camellia: #d6453d;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { min-height: 100%; }
+body {
+  font-family: "Noto Sans KR", "Noto Sans SC", "Noto Sans JP", sans-serif;
+  color: var(--ink);
+  background: #e9e1d2;
+  display: flex; justify-content: center;
+}
+.app {
+  width: 100%; max-width: 480px; min-height: 100vh; min-height: 100dvh; position: relative; overflow: hidden;
+  background:
+    radial-gradient(rgba(122,90,60,.07) 1px, transparent 1.2px) 0 0 / 14px 14px,
+    var(--paper);
+}
+
+/* ============ 1. 언어 선택 ============ */
+#select { padding: 18px 18px 28px; position: relative; }
+
+.badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 11px; font-weight: 700; letter-spacing: .12em; color: var(--plum);
+  border: 1.5px solid var(--plum); border-radius: 999px; padding: 5px 12px; background: rgba(255,255,255,.6);
+}
+.badge i { width: 7px; height: 7px; border-radius: 50%; background: var(--blossom); animation: blink 1.6s ease-in-out infinite; }
+@keyframes blink { 50% { opacity: .25; } }
+
+.hero { position: relative; height: 300px; margin: 6px -18px 0; }
+.branch { position: absolute; right: -24px; top: -20px; width: 250px; height: auto; opacity: .95; }
+.hello {
+  position: absolute; left: 18px; top: 66px; z-index: 2;
+  font-family: "Noto Serif KR", serif; font-weight: 900; font-size: 46px; line-height: 1.05; letter-spacing: -0.03em;
+  min-height: 100px;
+}
+.hello .word { display: inline-block; animation: rise .6s cubic-bezier(.2,.8,.2,1) both; }
+.hello[data-lang="zh"] { font-family: "Noto Sans SC", sans-serif; }
+.hello[data-lang="ja"] { font-family: "Noto Sans JP", sans-serif; }
+.hello small { display: block; font-family: "Noto Sans KR", sans-serif; font-size: 14px; font-weight: 700; color: var(--muted); letter-spacing: 0; margin-top: 10px; }
+@keyframes rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+.dots { position: absolute; left: 18px; top: 190px; display: flex; gap: 6px; z-index: 2; }
+.dots span { width: 6px; height: 6px; border-radius: 3px; background: #d8cbbb; transition: width .3s, background .3s; }
+.dots span.on { width: 18px; background: var(--blossom); }
+
+.big {
+  position: absolute; left: 0; right: 0; bottom: 6px; text-align: center; z-index: 1;
+  font-family: "Bebas Neue", sans-serif; font-size: 86px; line-height: .8; letter-spacing: .02em;
+  color: transparent; -webkit-text-stroke: 1.5px rgba(106,44,145,.28);
+}
+.waves { position: absolute; left: 0; right: 0; bottom: 0; height: 38px; z-index: 0; }
+
+.petal { position: absolute; top: -20px; width: 12px; height: 12px; background: var(--blossom); border-radius: 80% 0 80% 0; opacity: .8; z-index: 3; pointer-events: none; animation: fall linear infinite; }
+@keyframes fall { to { transform: translate(-60px, 820px) rotate(540deg); opacity: 0; } }
+
+.ask { display: flex; align-items: baseline; justify-content: space-between; margin: 18px 2px 12px; }
+.ask b { font-size: 16px; }
+.ask span { font-size: 11px; color: var(--muted); text-align: right; line-height: 1.5; }
+
+/* 티켓 */
+.tickets { display: flex; flex-direction: column; gap: 12px; }
+.ticket {
+  --c: var(--blossom);
+  position: relative; display: grid; grid-template-columns: 1fr 86px; width: 100%;
+  border: 0; padding: 0; background: none; font: inherit; color: inherit; text-align: left; cursor: pointer;
+  filter: drop-shadow(0 6px 10px rgba(60,30,40,.12));
+  animation: rise .5s cubic-bezier(.2,.8,.2,1) both;
+  transition: transform .15s;
+}
+.ticket:nth-child(2) { animation-delay: .08s; } .ticket:nth-child(3) { animation-delay: .16s; } .ticket:nth-child(4) { animation-delay: .24s; }
+.ticket:hover { transform: translateY(-2px) rotate(-.4deg); }
+.ticket:active { transform: scale(.98); }
+.ticket:focus-visible { outline: 3px solid var(--plum); outline-offset: 4px; border-radius: 14px; }
+.t-main, .t-stub {
+  background: #fff; position: relative; min-height: 84px;
+  /* 양쪽 반원 홈 (티켓 펀치) */
+  -webkit-mask: radial-gradient(circle 9px at 100% 50%, transparent 98%, #000) right / 100% 100% no-repeat;
+          mask: radial-gradient(circle 9px at 100% 50%, transparent 98%, #000) right / 100% 100% no-repeat;
+}
+.t-main { border-radius: 14px 0 0 14px; padding: 14px 16px 14px 20px; display: flex; flex-direction: column; justify-content: center; overflow: hidden; }
+.t-main::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 7px; background: var(--c); }
+.t-main::after { /* 은은한 꽃 무늬 */
+  content: "✿"; position: absolute; right: 10px; bottom: -14px; font-size: 62px; color: var(--c); opacity: .12; line-height: 1;
+}
+.t-stub {
+  border-radius: 0 14px 14px 0; background: var(--c); color: #fff;
+  -webkit-mask: radial-gradient(circle 9px at 0 50%, transparent 98%, #000);
+          mask: radial-gradient(circle 9px at 0 50%, transparent 98%, #000);
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px;
+  border-left: 2px dashed rgba(255,255,255,.75);
+}
+.t-no { font-family: "Bebas Neue", sans-serif; font-size: 13px; letter-spacing: .15em; color: var(--c); }
+.t-name { font-size: 24px; font-weight: 900; line-height: 1.15; letter-spacing: -0.01em; }
+.t-sub { font-size: 12px; color: var(--muted); margin-top: 2px; }
+.t-go { font-size: 13px; font-weight: 900; }
+.t-arrow { font-family: "Bebas Neue", sans-serif; font-size: 22px; line-height: 1; }
+/* 한중일 한자가 한국어 글꼴로 섞여 보이지 않도록 언어별 글꼴 지정 */
+[lang="zh-Hans"] { font-family: "Noto Sans SC", sans-serif; }
+[lang="ja"] { font-family: "Noto Sans JP", sans-serif; }
+.t-no { font-family: "Bebas Neue", sans-serif !important; }
+.ticket.current .t-main { box-shadow: inset 0 0 0 2px var(--c); }
+
+.foot { margin-top: 18px; text-align: center; font-size: 11px; color: var(--muted); }
+
+/* 행운 도장 */
+.stamp-layer {
+  position: fixed; inset: 0; display: none; align-items: center; justify-content: center; z-index: 50;
+  background: rgba(251,245,234,.82); backdrop-filter: blur(2px);
+}
+.stamp-layer.on { display: flex; }
+.stamp {
+  --c: var(--camellia);
+  width: 210px; height: 210px; border-radius: 50%; border: 6px double var(--c); color: var(--c);
+  display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;
+  transform: rotate(-12deg); animation: thump .45s cubic-bezier(.3,1.6,.5,1) both;
+  background: radial-gradient(circle, rgba(255,255,255,.4), transparent 70%);
+}
+.stamp b { font-family: "Bebas Neue", sans-serif; font-size: 64px; line-height: .9; letter-spacing: .04em; }
+.stamp span { font-size: 18px; font-weight: 900; margin-top: 4px; }
+.stamp em { font-style: normal; font-size: 10px; letter-spacing: .2em; margin-top: 6px; opacity: .8; }
+@keyframes thump { 0% { transform: scale(2.4) rotate(-30deg); opacity: 0; } 100% { transform: scale(1) rotate(-12deg); opacity: .92; } }
+
+/* ============ 2. 선택 후 메인 미리보기 ============ */
+#main { display: none; padding-bottom: 24px; }
+.topbar { display: flex; align-items: center; justify-content: space-between; padding: 14px 16px; }
+.brand { font-weight: 900; color: var(--plum); font-size: 17px; }
+.brand small { display: block; font-family: "Bebas Neue", sans-serif; font-weight: 400; font-size: 12px; letter-spacing: .18em; color: var(--blossom); }
+.chip {
+  display: inline-flex; align-items: center; gap: 6px; font: inherit; font-size: 13px; font-weight: 700;
+  padding: 7px 12px; border-radius: 999px; border: 1.5px solid var(--ink); background: #fff; color: var(--ink); cursor: pointer;
+}
+.menu { display: flex; gap: 8px; overflow-x: auto; padding: 4px 16px 12px; scrollbar-width: none; }
+.menu a { flex: none; padding: 9px 14px; border-radius: 999px; background: #fff; font-size: 13px; font-weight: 700; color: var(--ink); text-decoration: none; box-shadow: 0 2px 6px rgba(60,30,40,.08); }
+.menu a:first-child { background: var(--plum); color: #fff; }
+.banner {
+  margin: 4px 16px 0; height: 190px; border-radius: 18px; display: flex; align-items: center; justify-content: center; text-align: center; padding: 20px;
+  background: repeating-linear-gradient(45deg, #efe3ee 0 12px, #f8f1f6 12px 24px); color: var(--plum); font-size: 13px; font-weight: 700; line-height: 1.6;
+}
+.pass {
+  margin: 16px; border-radius: 18px; background: #fff; padding: 16px; display: grid; grid-template-columns: 1fr auto; gap: 12px; align-items: center;
+  box-shadow: 0 6px 14px rgba(60,30,40,.08);
+}
+.pass b { display: block; font-size: 15px; margin-bottom: 4px; }
+.pass p { font-size: 12.5px; line-height: 1.6; color: var(--muted); }
+.pass .mini { width: 62px; height: 62px; border-radius: 50%; border: 3px double var(--camellia); color: var(--camellia); display: flex; align-items: center; justify-content: center; font-family: "Bebas Neue", sans-serif; font-size: 22px; transform: rotate(-12deg); }
+.footer { margin: 8px 16px 0; font-size: 11.5px; color: var(--muted); line-height: 1.7; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .petal { display: none; }
+}
+</style>
+</head>
+<body>
+<div class="app">
+
+  <!-- 1. 언어 선택 (QR 스캔 후 첫 화면) -->
+  <section id="select">
+    <span class="badge"><i></i>GWANGYANG LUCKY PANGPANG</span>
+
+    <div class="hero" aria-hidden="true">
+      <!-- 매화 가지 -->
+      <svg class="branch" viewBox="0 0 270 220" fill="none">
+        <path d="M270 18 C210 30 176 54 150 86 C128 112 104 128 70 140 M150 86 C160 116 158 148 140 176 M196 46 C204 70 222 84 246 92 M110 122 C98 100 96 82 102 62"
+              stroke="#5a3a2c" stroke-width="5" stroke-linecap="round"/>
+        <path d="M70 140 C52 146 40 156 30 170 M140 176 C134 190 132 200 134 212" stroke="#5a3a2c" stroke-width="3" stroke-linecap="round"/>
+        <g id="flowers"></g>
+      </svg>
+
+      <h1 class="hello" id="hello" data-lang="ko"><span class="word">안녕하세요</span><small>광양에 오신 것을 환영합니다</small></h1>
+      <div class="dots" id="dots"><span class="on"></span><span></span><span></span><span></span></div>
+
+      <div class="big">GWANGYANG</div>
+      <svg class="waves" viewBox="0 0 480 38" preserveAspectRatio="none">
+        <path d="M0 20 Q30 8 60 20 T120 20 T180 20 T240 20 T300 20 T360 20 T420 20 T480 20 V38 H0Z" fill="#cfe3ef"/>
+        <path d="M0 28 Q30 18 60 28 T120 28 T180 28 T240 28 T300 28 T360 28 T420 28 T480 28 V38 H0Z" fill="#9cc7e0"/>
+      </svg>
+    </div>
+
+    <div class="ask">
+      <b>나의 언어 티켓을 고르세요</b>
+      <span>Pick your ticket<br><span lang="zh-Hans">选择语言</span> · <span lang="ja">言語を選択</span></span>
+    </div>
+
+    <div class="tickets">
+      <button class="ticket" lang="ko" data-lang="ko" style="--c: var(--blossom)">
+        <span class="t-main"><span class="t-no">NO.01 · KOREAN</span><span class="t-name">한국어</span><span class="t-sub">매화 향기 가득한 광양으로</span></span>
+        <span class="t-stub"><span class="t-go">입장</span><span class="t-arrow">→</span></span>
+      </button>
+      <button class="ticket" lang="en" data-lang="en" style="--c: var(--river)">
+        <span class="t-main"><span class="t-no">NO.02 · ENGLISH</span><span class="t-name">English</span><span class="t-sub">Step into Gwangyang</span></span>
+        <span class="t-stub"><span class="t-go">ENTER</span><span class="t-arrow">→</span></span>
+      </button>
+      <button class="ticket" lang="zh-Hans" data-lang="zh" style="--c: var(--camellia)">
+        <span class="t-main"><span class="t-no">NO.03 · CHINESE</span><span class="t-name">简体中文</span><span class="t-sub">走进梅香光阳</span></span>
+        <span class="t-stub"><span class="t-go">进入</span><span class="t-arrow">→</span></span>
+      </button>
+      <button class="ticket" lang="ja" data-lang="ja" style="--c: var(--maesil)">
+        <span class="t-main"><span class="t-no">NO.04 · JAPANESE</span><span class="t-name">日本語</span><span class="t-sub">梅香る光陽へようこそ</span></span>
+        <span class="t-stub"><span class="t-go">入場</span><span class="t-arrow">→</span></span>
+      </button>
+    </div>
+
+    <p class="foot">언어는 언제든 다시 바꿀 수 있어요 · Change anytime</p>
+  </section>
+
+  <!-- 2. 선택 후 메인 화면 (번역 적용 미리보기) -->
+  <section id="main" aria-live="polite">
+    <div class="topbar">
+      <div class="brand">광양행운팡팡<small>LUCKY PANGPANG</small></div>
+      <button class="chip" id="change"><span aria-hidden="true">🎫</span><span id="cur"></span></button>
+    </div>
+    <nav class="menu" id="menu"></nav>
+    <div class="banner">언어별 메인 배너 자리<br>(기존 배너는 한글이 이미지에 들어 있어 새로 제작 필요)</div>
+    <div class="pass"><div><b id="passT"></b><p id="passD"></p></div><div class="mini">PANG!</div></div>
+    <p class="footer" id="footer"></p>
+  </section>
+
+  <div class="stamp-layer" id="stampLayer" aria-live="assertive">
+    <div class="stamp" id="stamp"><b>PANG!</b><span id="stampText"></span><em>LUCKY PANGPANG</em></div>
+  </div>
+</div>
+
+<script>
+// 번역 목록 엑셀(1_화면문구) 초벌 번역 일부. 실제 적용 시 lang/*.json 또는 PHP 배열로 분리
+var T = {
+  ko: { name: '한국어', hello: '안녕하세요', welcome: '광양에 오신 것을 환영합니다', stamp: '환영합니다!',
+        menu: ['행사안내', '음식점', '숙박', '관광지', '특산물'],
+        passT: '"행운팡팡" 포인트 적립', passD: '관광지 내에서 행운팡팡 QR코드를 스캔하면 행운의 포인트를 받습니다.',
+        footer: '본 사이트의 정보는 업체 및 기관의 사정에 따라 변경될 수 있습니다.' },
+  en: { name: 'English', hello: 'Hello', welcome: 'Welcome to Gwangyang', stamp: 'Welcome!',
+        menu: ['Events', 'Restaurants', 'Stay', 'Attractions', 'Local Specialties'],
+        passT: 'Earn Lucky PangPang Points', passD: 'Scan a Lucky PangPang QR code at tourist sites to receive lucky points.',
+        footer: 'Information on this site may change depending on the circumstances of businesses and organizations.' },
+  zh: { name: '简体中文', hello: '你好', welcome: '欢迎来到光阳', stamp: '欢迎光临!',
+        menu: ['活动信息', '美食', '住宿', '景点', '特产'],
+        passT: '幸运砰砰积分累积', passD: '在景点内扫描幸运砰砰二维码，即可获得幸运积分。',
+        footer: '本网站信息可能因商家及机构情况而有所变动。' },
+  ja: { name: '日本語', hello: 'こんにちは', welcome: '光陽へようこそ', stamp: 'ようこそ!',
+        menu: ['イベント情報', 'グルメ', '宿泊', '観光スポット', '特産品'],
+        passT: 'ラッキーパンパン ポイント獲得', passD: '観光地内でラッキーパンパンのQRコードをスキャンすると、ラッキーポイントがもらえます。',
+        footer: '本サイトの情報は、事業者・機関の都合により変更される場合があります。' }
+};
+var ORDER = ['ko', 'en', 'zh', 'ja'];
+var HTML_LANG = { ko: 'ko', en: 'en', zh: 'zh-Hans', ja: 'ja' };
+var COLOR = { ko: 'var(--blossom)', en: 'var(--river)', zh: 'var(--camellia)', ja: 'var(--maesil)' };
+var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+function save(l) { try { localStorage.setItem('gy_lang', l); } catch (e) {} }
+function load() { try { return localStorage.getItem('gy_lang'); } catch (e) { return null; } }
+
+// 인사말이 4개 언어로 돌아가며 바뀜
+var hi = 0, hiTimer;
+function rotateHello() {
+  hi = (hi + 1) % ORDER.length;
+  var l = ORDER[hi], el = document.getElementById('hello');
+  el.dataset.lang = l;
+  el.lang = HTML_LANG[l];
+  el.innerHTML = '<span class="word">' + T[l].hello + '</span><small>' + T[l].welcome + '</small>';
+  document.querySelectorAll('#dots span').forEach(function (d, i) { d.classList.toggle('on', i === hi); });
+}
+
+// 매화 꽃 그리기 (다섯 꽃잎)
+(function () {
+  var g = document.getElementById('flowers'), ns = 'http://www.w3.org/2000/svg';
+  var spots = [[150, 86, 15], [196, 46, 13], [246, 92, 11], [102, 62, 12], [140, 176, 13], [70, 140, 12], [176, 64, 9], [124, 112, 9], [30, 170, 10], [222, 30, 10], [158, 132, 8]];
+  spots.forEach(function (s, k) {
+    var f = document.createElementNS(ns, 'g');
+    f.setAttribute('transform', 'translate(' + s[0] + ' ' + s[1] + ') rotate(' + (k * 23) + ')');
+    var fill = k % 3 === 1 ? '#ffffff' : (k % 3 === 2 ? '#f7b3c9' : '#ef7fa5');
+    for (var i = 0; i < 5; i++) {
+      var p = document.createElementNS(ns, 'circle');
+      var a = i * 72 * Math.PI / 180, r = s[2] * .55;
+      p.setAttribute('cx', (Math.cos(a) * r).toFixed(1)); p.setAttribute('cy', (Math.sin(a) * r).toFixed(1));
+      p.setAttribute('r', (s[2] * .52).toFixed(1)); p.setAttribute('fill', fill);
+      p.setAttribute('stroke', '#e46b94'); p.setAttribute('stroke-width', '.8');
+      f.appendChild(p);
+    }
+    var c = document.createElementNS(ns, 'circle');
+    c.setAttribute('r', (s[2] * .25).toFixed(1)); c.setAttribute('fill', '#f4c542');
+    f.appendChild(c);
+    g.appendChild(f);
+  });
+})();
+
+// 꽃잎 날리기
+if (!reduce) {
+  var app = document.querySelector('.app');
+  for (var i = 0; i < 9; i++) {
+    var p = document.createElement('span');
+    p.className = 'petal';
+    p.style.left = (10 + Math.random() * 95) + '%';
+    p.style.animationDuration = (7 + Math.random() * 6) + 's';
+    p.style.animationDelay = (-Math.random() * 12) + 's';
+    p.style.background = i % 3 ? '#ef7fa5' : '#ffffff';
+    app.appendChild(p);
+  }
+}
+
+function show(l) {
+  var t = T[l];
+  document.documentElement.lang = HTML_LANG[l];
+  document.getElementById('cur').textContent = t.name;
+  document.getElementById('menu').innerHTML = t.menu.map(function (m) { return '<a href="#">' + m + '</a>'; }).join('');
+  document.getElementById('passT').textContent = t.passT;
+  document.getElementById('passD').textContent = t.passD;
+  document.getElementById('footer').textContent = t.footer;
+  document.getElementById('select').style.display = 'none';
+  document.getElementById('main').style.display = 'block';
+  clearInterval(hiTimer);
+  window.scrollTo(0, 0);
+}
+
+function choose(l) {
+  save(l);
+  var layer = document.getElementById('stampLayer'), stamp = document.getElementById('stamp');
+  stamp.style.setProperty('--c', COLOR[l]);
+  document.getElementById('stampText').textContent = T[l].stamp;
+  stamp.style.animation = 'none'; stamp.offsetWidth; stamp.style.animation = '';
+  layer.classList.add('on');
+  setTimeout(function () { layer.classList.remove('on'); show(l); }, reduce ? 300 : 1100);
+}
+
+function openSelect() {
+  var cur = load();
+  document.querySelectorAll('.ticket').forEach(function (b) { b.classList.toggle('current', b.dataset.lang === cur); });
+  document.getElementById('main').style.display = 'none';
+  document.getElementById('select').style.display = 'block';
+  clearInterval(hiTimer);
+  if (!reduce) hiTimer = setInterval(rotateHello, 2200);
+}
+
+document.querySelectorAll('.ticket').forEach(function (b) {
+  b.addEventListener('click', function () { choose(b.dataset.lang); });
+});
+document.getElementById('change').addEventListener('click', openSelect);
+
+// 시안 확인용: 항상 선택 화면부터 (실제 적용 시 저장된 언어가 있으면 바로 show(load()))
+openSelect();
+</script>
+</body>
+</html>

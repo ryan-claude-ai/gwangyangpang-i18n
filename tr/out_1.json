@@ -1,0 +1,650 @@
+[
+ {
+  "id": "UI-001",
+  "en": "Events",
+  "zh": "活动信息",
+  "ja": "イベント情報"
+ },
+ {
+  "id": "UI-002",
+  "en": "Restaurants",
+  "zh": "美食",
+  "ja": "グルメ"
+ },
+ {
+  "id": "UI-003",
+  "en": "Stay",
+  "zh": "住宿",
+  "ja": "宿泊"
+ },
+ {
+  "id": "UI-004",
+  "en": "Attractions",
+  "zh": "景点",
+  "ja": "観光スポット"
+ },
+ {
+  "id": "UI-005",
+  "en": "Local Specialties",
+  "zh": "特产",
+  "ja": "特産品"
+ },
+ {
+  "id": "UI-006",
+  "en": "Edit Info / Partnership Inquiry",
+  "zh": "信息修改 / 合作咨询",
+  "ja": "情報修正・業務提携のお問い合わせ"
+ },
+ {
+  "id": "UI-007",
+  "en": "Mujigae Company Co., Ltd.",
+  "zh": "Mujigae Company株式会社",
+  "ja": "株式会社Mujigae Company（ムジゲカンパニー）"
+ },
+ {
+  "id": "UI-008",
+  "en": "Yeo Sang-ho",
+  "zh": "Yeo Sang-ho",
+  "ja": "Yeo Sang-ho（ヨ・サンホ）"
+ },
+ {
+  "id": "UI-009",
+  "en": "2F, 1 Yeonam-ro 4-gil, Buk-gu, Daegu",
+  "zh": "大邱广域市北区 Yeonam-ro 4-gil 1号 2层",
+  "ja": "大邱広域市北区 Yeonam-ro 4-gil 1、2階"
+ },
+ {
+  "id": "UI-010",
+  "en": "Information on this site may change depending on the circumstances of businesses and organizations.",
+  "zh": "本网站信息可能因商家及机构情况而有所变动。",
+  "ja": "本サイトの情報は、事業者・機関の都合により変更される場合があります。"
+ },
+ {
+  "id": "UI-011",
+  "en": "Copyright © 2026 Mujigae Company ALL RIGHTS RESERVED.",
+  "zh": "Copyright © 2026 Mujigae Company ALL RIGHTS RESERVED.",
+  "ja": "Copyright © 2026 Mujigae Company ALL RIGHTS RESERVED."
+ },
+ {
+  "id": "UI-012",
+  "en": "- How to Use -",
+  "zh": "- 使用指南 -",
+  "ja": "- ご利用ガイド -"
+ },
+ {
+  "id": "UI-013",
+  "en": "Earning \"Lucky PangPang\" Points",
+  "zh": "\"幸运砰砰\"积分累积",
+  "ja": "「ラッキーパンパン」ポイントを貯める"
+ },
+ {
+  "id": "UI-014",
+  "en": "1. Scan a Lucky PangPang QR code at tourist sites to receive Lucky Points.",
+  "zh": "1. 在景点内扫描幸运砰砰二维码，即可获得幸运积分。",
+  "ja": "1. 観光地内でラッキーパンパンのQRコードをスキャンすると、ラッキーポイントがもらえます。"
+ },
+ {
+  "id": "UI-015",
+  "en": "2. Exchange your Lucky Points for gifts at Information Center Booth 7.",
+  "zh": "2. 幸运积分可在综合服务台7号展位兑换礼品。",
+  "ja": "2. ラッキーポイントは総合案内7番ブースでプレゼントと交換できます。"
+ },
+ {
+  "id": "UI-016",
+  "en": "3. Take part in our satisfaction survey for a chance to win a coffee coupon (prize draw).",
+  "zh": "3. 参与满意度调查，即可参加抽奖，中奖者将获赠咖啡券。",
+  "ja": "3. 満足度調査にご参加いただくと、抽選でコーヒークーポンをお送りします。"
+ },
+ {
+  "id": "UI-017",
+  "en": "Using \"Lucky PangPang\" Points",
+  "zh": "\"幸运砰砰\"积分使用",
+  "ja": "「ラッキーパンパン」ポイントを使う"
+ },
+ {
+  "id": "UI-018",
+  "en": "1. Scan the gift exchange QR code at Information Center Booth 7.",
+  "zh": "1. 在综合服务台7号展位扫描礼品兑换二维码。",
+  "ja": "1. 総合案内7番ブースで、プレゼント交換用のQRコードをスキャンします。"
+ },
+ {
+  "id": "UI-019",
+  "en": "2. Complete identity verification.",
+  "zh": "2. 完成身份验证。",
+  "ja": "2. 本人認証を行います。"
+ },
+ {
+  "id": "UI-020",
+  "en": "3. Select 5,000 points and tap Confirm to exchange for a gift.",
+  "zh": "3. 选择5,000积分并点击确认，即可完成礼品兑换。",
+  "ja": "3. 5,000ポイントを選択して「確認」を押すと、プレゼント交換が完了します。"
+ },
+ {
+  "id": "UI-021",
+  "en": "Unused Lucky PangPang points expire automatically at 11:00 PM on the day they are earned.",
+  "zh": "幸运砰砰积分当天23点前未使用的将自动失效。",
+  "ja": "ラッキーパンパンポイントは、当日23時までに使用しなかった分が自動的に失効します。"
+ },
+ {
+  "id": "UI-022",
+  "en": "OK",
+  "zh": "确认",
+  "ja": "確認"
+ },
+ {
+  "id": "UI-023",
+  "en": "Consent to Collection of Information for Lucky PangPang (Required)",
+  "zh": "同意为参与幸运砰砰而收集个人信息（必选）",
+  "ja": "ラッキーパンパン参加のための情報収集への同意（必須）"
+ },
+ {
+  "id": "UI-024",
+  "en": "1. Information collected: name, phone number",
+  "zh": "1. 收集项目：姓名、电话号码",
+  "ja": "1. 収集項目：氏名、電話番号"
+ },
+ {
+  "id": "UI-025",
+  "en": "2. Used only for issuing and redeeming points",
+  "zh": "2. 仅用于积分发放及使用",
+  "ja": "2. ポイントの付与および利用にのみ使用されます"
+ },
+ {
+  "id": "UI-026",
+  "en": "3. Automatically deleted after 4 weeks",
+  "zh": "3. 4周后自动删除",
+  "ja": "3. 4週間後に自動削除されます"
+ },
+ {
+  "id": "UI-027",
+  "en": "My Usage History",
+  "zh": "查询我的使用记录",
+  "ja": "利用履歴の確認"
+ },
+ {
+  "id": "UI-028",
+  "en": "Name",
+  "zh": "姓名",
+  "ja": "氏名"
+ },
+ {
+  "id": "UI-029",
+  "en": "Phone Number",
+  "zh": "联系电话",
+  "ja": "電話番号"
+ },
+ {
+  "id": "UI-030",
+  "en": "- Satisfaction Survey -",
+  "zh": "- 满意度调查 -",
+  "ja": "- 満足度調査 -"
+ },
+ {
+  "id": "UI-031",
+  "en": "1. What is your gender?",
+  "zh": "1. 您的性别是？",
+  "ja": "1. 性別を教えてください。"
+ },
+ {
+  "id": "UI-032",
+  "en": "Male",
+  "zh": "男",
+  "ja": "男性"
+ },
+ {
+  "id": "UI-033",
+  "en": "Female",
+  "zh": "女",
+  "ja": "女性"
+ },
+ {
+  "id": "UI-034",
+  "en": "2. What is your age group?",
+  "zh": "2. 您的年龄段是？",
+  "ja": "2. 年代を教えてください。"
+ },
+ {
+  "id": "UI-035",
+  "en": "10s",
+  "zh": "10多岁",
+  "ja": "10代"
+ },
+ {
+  "id": "UI-036",
+  "en": "20s",
+  "zh": "20多岁",
+  "ja": "20代"
+ },
+ {
+  "id": "UI-037",
+  "en": "30s",
+  "zh": "30多岁",
+  "ja": "30代"
+ },
+ {
+  "id": "UI-038",
+  "en": "40s",
+  "zh": "40多岁",
+  "ja": "40代"
+ },
+ {
+  "id": "UI-039",
+  "en": "50s",
+  "zh": "50多岁",
+  "ja": "50代"
+ },
+ {
+  "id": "UI-040",
+  "en": "60 or older",
+  "zh": "60岁以上",
+  "ja": "60代以上"
+ },
+ {
+  "id": "UI-041",
+  "en": "3. Where do you live?",
+  "zh": "3. 您的居住地是？",
+  "ja": "3. お住まいの地域はどちらですか？"
+ },
+ {
+  "id": "UI-042",
+  "en": "Seoul",
+  "zh": "首尔",
+  "ja": "ソウル"
+ },
+ {
+  "id": "UI-043",
+  "en": "Incheon / Gyeonggi",
+  "zh": "仁川 / 京畿",
+  "ja": "仁川 / 京畿"
+ },
+ {
+  "id": "UI-044",
+  "en": "Gangwon",
+  "zh": "江原",
+  "ja": "江原"
+ },
+ {
+  "id": "UI-045",
+  "en": "Daejeon / Chungnam",
+  "zh": "大田 / 忠南",
+  "ja": "大田 / 忠南"
+ },
+ {
+  "id": "UI-046",
+  "en": "Chungbuk",
+  "zh": "忠北",
+  "ja": "忠北"
+ },
+ {
+  "id": "UI-047",
+  "en": "Daegu / Gyeongbuk",
+  "zh": "大邱 / 庆北",
+  "ja": "大邱 / 慶北"
+ },
+ {
+  "id": "UI-048",
+  "en": "Busan / Ulsan / Gyeongnam",
+  "zh": "釜山 / 蔚山 / 庆南",
+  "ja": "釜山 / 蔚山 / 慶南"
+ },
+ {
+  "id": "UI-049",
+  "en": "Jeonbuk",
+  "zh": "全北",
+  "ja": "全北"
+ },
+ {
+  "id": "UI-050",
+  "en": "Gwangju / Jeonnam",
+  "zh": "光州 / 全南",
+  "ja": "光州 / 全南"
+ },
+ {
+  "id": "UI-051",
+  "en": "Jeju",
+  "zh": "济州",
+  "ja": "済州"
+ },
+ {
+  "id": "UI-052",
+  "en": "4. Who did you come to the Maehwa Festival with?",
+  "zh": "4. 您和谁一起来观赏梅花节？",
+  "ja": "4. 梅花祭りには誰と来られましたか？"
+ },
+ {
+  "id": "UI-053",
+  "en": "Alone",
+  "zh": "独自",
+  "ja": "ひとりで"
+ },
+ {
+  "id": "UI-054",
+  "en": "Family",
+  "zh": "家人",
+  "ja": "家族"
+ },
+ {
+  "id": "UI-055",
+  "en": "Friends",
+  "zh": "朋友",
+  "ja": "友人"
+ },
+ {
+  "id": "UI-056",
+  "en": "Other",
+  "zh": "其他",
+  "ja": "その他"
+ },
+ {
+  "id": "UI-057",
+  "en": "5. How did you get to the Maehwa Festival?",
+  "zh": "5. 您是如何来到梅花节现场的？",
+  "ja": "5. 梅花祭り会場へはどのように来られましたか？"
+ },
+ {
+  "id": "UI-058",
+  "en": "On foot",
+  "zh": "步行",
+  "ja": "徒歩"
+ },
+ {
+  "id": "UI-059",
+  "en": "Own car",
+  "zh": "自驾",
+  "ja": "自家用車"
+ },
+ {
+  "id": "UI-060",
+  "en": "Public transportation",
+  "zh": "公共交通",
+  "ja": "公共交通機関"
+ },
+ {
+  "id": "UI-061",
+  "en": "6. How many times have you visited the Maehwa Festival?",
+  "zh": "6. 这是您第几次来梅花节？",
+  "ja": "6. 梅花祭りへのご来場は何回目ですか？"
+ },
+ {
+  "id": "UI-062",
+  "en": "First time",
+  "zh": "第一次",
+  "ja": "初めて"
+ },
+ {
+  "id": "UI-063",
+  "en": "2 times",
+  "zh": "2次",
+  "ja": "2回目"
+ },
+ {
+  "id": "UI-064",
+  "en": "3 times",
+  "zh": "3次",
+  "ja": "3回目"
+ },
+ {
+  "id": "UI-065",
+  "en": "4 times",
+  "zh": "4次",
+  "ja": "4回目"
+ },
+ {
+  "id": "UI-066",
+  "en": "5 or more",
+  "zh": "5次及以上",
+  "ja": "5回以上"
+ },
+ {
+  "id": "UI-067",
+  "en": "7. How did you hear about the Maehwa Festival?",
+  "zh": "7. 您是通过什么途径了解到梅花节的？",
+  "ja": "7. 梅花祭りの情報はどこで知りましたか？"
+ },
+ {
+  "id": "UI-068",
+  "en": "Gwangyang City website",
+  "zh": "光阳市官网",
+  "ja": "光陽市ホームページ"
+ },
+ {
+  "id": "UI-069",
+  "en": "Banners / promotional materials",
+  "zh": "横幅及宣传品",
+  "ja": "横断幕・広告物"
+ },
+ {
+  "id": "UI-070",
+  "en": "Recommended by friends",
+  "zh": "亲友推荐",
+  "ja": "知人の紹介"
+ },
+ {
+  "id": "UI-071",
+  "en": "Media / press",
+  "zh": "媒体宣传",
+  "ja": "メディア・報道"
+ },
+ {
+  "id": "UI-072",
+  "en": "8. What did you like most during the event?",
+  "zh": "8. 活动期间您最满意的是？",
+  "ja": "8. 開催期間中、最も気に入ったものは？"
+ },
+ {
+  "id": "UI-073",
+  "en": "Scenery",
+  "zh": "风景",
+  "ja": "景色"
+ },
+ {
+  "id": "UI-074",
+  "en": "Events & performances",
+  "zh": "活动及演出",
+  "ja": "イベント・公演"
+ },
+ {
+  "id": "UI-075",
+  "en": "Food booths",
+  "zh": "美食摊位",
+  "ja": "グルメブース"
+ },
+ {
+  "id": "UI-076",
+  "en": "Hands-on booths",
+  "zh": "体验摊位",
+  "ja": "体験ブース"
+ },
+ {
+  "id": "UI-077",
+  "en": "Gwangyang Lucky PangPang",
+  "zh": "光阳幸运砰砰",
+  "ja": "光陽ラッキーパンパン"
+ },
+ {
+  "id": "UI-078",
+  "en": "9. Was anything inconvenient during the event?",
+  "zh": "9. 活动期间有什么不便之处吗？",
+  "ja": "9. 開催期間中、ご不便な点はありましたか？"
+ },
+ {
+  "id": "UI-079",
+  "en": "Admission fee",
+  "zh": "门票",
+  "ja": "入場料"
+ },
+ {
+  "id": "UI-080",
+  "en": "Parking",
+  "zh": "停车",
+  "ja": "駐車場"
+ },
+ {
+  "id": "UI-081",
+  "en": "Booth prices",
+  "zh": "摊位价格",
+  "ja": "ブースの料金"
+ },
+ {
+  "id": "UI-082",
+  "en": "Service",
+  "zh": "服务",
+  "ja": "サービス"
+ },
+ {
+  "id": "UI-083",
+  "en": "Programs",
+  "zh": "活动项目",
+  "ja": "プログラム"
+ },
+ {
+  "id": "UI-084",
+  "en": "10. I would like to visit again next year.",
+  "zh": "10. 明年还想再来",
+  "ja": "10. 来年もまた来たい"
+ },
+ {
+  "id": "UI-085",
+  "en": "Strongly agree",
+  "zh": "非常同意",
+  "ja": "とてもそう思う"
+ },
+ {
+  "id": "UI-086",
+  "en": "Agree",
+  "zh": "同意",
+  "ja": "そう思う"
+ },
+ {
+  "id": "UI-087",
+  "en": "Neutral",
+  "zh": "一般",
+  "ja": "どちらでもない"
+ },
+ {
+  "id": "UI-088",
+  "en": "Disagree",
+  "zh": "不同意",
+  "ja": "そう思わない"
+ },
+ {
+  "id": "UI-089",
+  "en": "Strongly disagree",
+  "zh": "非常不同意",
+  "ja": "まったくそう思わない"
+ },
+ {
+  "id": "UI-090",
+  "en": "*Participant's mobile number (your responses will not be recorded)",
+  "zh": "*参与者手机号码（参与内容不会被记录）",
+  "ja": "*参加者の携帯電話番号（回答内容は記録されません）"
+ },
+ {
+  "id": "UI-091",
+  "en": "Submit",
+  "zh": "提交",
+  "ja": "送信する"
+ },
+ {
+  "id": "C-001",
+  "en": "The 25th Gwangyang Maehwa (Plum Blossom) Festival",
+  "zh": "第25届光阳梅花节",
+  "ja": "第25回 光陽梅花祭り"
+ },
+ {
+  "id": "C-002",
+  "en": "Plum blossoms embroidered with light, spring dyed in plum blossoms\n\n- Festival: The 25th Gwangyang Maehwa (Plum Blossom) Festival\n- Dates: Mar 13 (Fri) – Mar 22 (Sun), 2026 (10 days)\n- Venue: Maehwa Village area, Daap-myeon\n- Hosted/Organized by: Gwangyang Maehwa Festival Committee\n- Program: Exhibitions, performances, sales, hands-on programs, and more",
+  "zh": "以光点缀的梅花，被梅花染红的春天\n\n- 节庆名称：第25届光阳梅花节\n- 节庆时间：2026年3月13日（周五）~ 3月22日（周日）（共10天）\n- 节庆地点：多鸭面梅花村一带\n- 主办/承办：光阳梅花节委员会\n- 活动内容：展览、演出、展销、体验项目等",
+  "ja": "光で彩られた梅の花、梅の花に染まる春\n\n- 祭り名称：第25回 光陽梅花祭り\n- 開催期間：2026年3月13日（金）～3月22日（日）（10日間）\n- 開催場所：多鴨面 梅花村一帯\n- 主催/主管：光陽梅花祭り委員会\n- 内容：展示、公演、販売、体験プログラムなど"
+ },
+ {
+  "id": "C-003",
+  "en": "Mar 13 (Fri) – Mar 22 (Sun), 2026 [10 days] / 07:00~18:00 | Seomjin Village, 55 Jimak 1-gil, Daap-myeon, Gwangyang-si, Jeollanam-do | https://gwangyang.go.kr/tour/gallery.es?mid=a31205020100&bid=0011&act=view&list_no=14471",
+  "zh": "2026年3月13日（周五）~ 3月22日（周日）[共10天] / 07:00~18:00 | 全罗南道光阳市多鸭面 Jimak 1-gil 55 蟾津村 | https://gwangyang.go.kr/tour/gallery.es?mid=a31205020100&bid=0011&act=view&list_no=14471",
+  "ja": "2026年3月13日（金）～3月22日（日）[10日間] / 07:00~18:00 | 全羅南道光陽市多鴨面 Jimak 1-gil 55 蟾津村（ソムジン村） | https://gwangyang.go.kr/tour/gallery.es?mid=a31205020100&bid=0011&act=view&list_no=14471"
+ },
+ {
+  "id": "C-004",
+  "en": "The 10th Gwangyang Cherry Blossom Culture Festival",
+  "zh": "第10届光阳樱花文化节",
+  "ja": "第10回 光陽桜文化祭り"
+ },
+ {
+  "id": "C-005",
+  "en": "Heart-fluttering like cherry blossoms, a spring day like a picnic\n \n- Event: The 10th Gwangyang Cherry Blossom Culture Festival\n- Dates: Mar 28 (Fri) – Mar 30 (Sun), 2025\n* Opening ceremony: Mar 29, 2025 (Sat) 11:00\n- Venue: Sculpture Park area, Geumho-dong\n- Slogan: Heart-fluttering like cherry blossoms, a spring day like a picnic\n- Hosted/Organized by: Gwangyang Cherry Blossom Culture Festival Promotion Committee\n \n□ Program\n❍ Featured Events\n- Geumho-dong history photo exhibition, cherry blossom photo exhibition, on-site treasure hunt, magic show\n❍ Hands-on / Sales / Exhibitions\n- NongHyup special sales booth (local agricultural products), Gwangyang makgeolli (rice wine) sales\n- Food market, rice cake pounding (tteokmechigi), soap making, sock-loop crafts\n❍ Volunteer / Promotion Booths\n- Korean pancake (buchimgae) corner, free tea house, nail art, calligraphy, popcorn / Hometown Love Donation\n❍ Busking Performances (Baegundae-gil)\n- Local singers / daily 14:00 ~ 18:00\n- POSCO Volunteer Group (harmonica & acoustic guitar) / (Sat) 16:00 ~ 18:00, (Sun) 18:00 ~ 20:00",
+  "zh": "如樱花般心动，如郊游般的春日\n \n- 活动名称：第10届光阳樱花文化节\n- 时间：2025年3月28日（周五）~ 3月30日（周日）\n* 开幕式：2025年3月29日（周六）11:00\n- 地点：金湖洞雕塑公园一带\n- 口号：如樱花般心动，如郊游般的春日\n- 主办/承办：光阳樱花文化节推进委员会\n \n□ 活动构成\n❍ 策划活动\n- 金湖洞历史摄影展、樱花摄影展、现场寻宝、魔术表演\n❍ 体验/展销/展览\n- 农协特卖摊位（销售当地农特产品）、光阳米酒销售\n- 美食市集、打年糕、手工香皂制作、袜圈手工艺\n❍ 志愿服务摊位/宣传摊位\n- 煎饼角、免费茶室、美甲、书法、爆米花 / 故乡爱捐赠制度\n❍ 街头表演（白云台街）\n- 本地歌手 / 每天 14:00 ~ 18:00\n- 浦项制铁志愿服务团（口琴&木吉他）/（周六）16:00 ~ 18:00，（周日）18:00 ~ 20:00",
+  "ja": "桜のようなときめき、ピクニックのような春の日\n \n- イベント名：第10回 光陽桜文化祭り\n- 期間：2025年3月28日（金）～3月30日（日）\n* 開会式：2025年3月29日（土）11:00\n- 場所：金湖洞 彫刻公園一帯\n- スローガン：桜のようなときめき、ピクニックのような春の日\n- 主催/主管：光陽桜文化祭り推進委員会\n \n□ イベント構成\n❍ 企画イベント\n- 金湖洞歴史写真展、桜写真展、現地宝探し、マジックショー\n❍ 体験/販売/展示\n- 農協特売ブース（地域の農特産物販売）、光陽マッコリ販売\n- グルメ市場、餅つき体験、石けん作り、靴下ループ手芸\n❍ ボランティアブース/広報ブース\n- チヂミコーナー、無料喫茶、ネイル、カリグラフィー、ポップコーン / ふるさと納税（故郷愛寄付制）\n❍ バスキング公演（白雲台キル）\n- 地元歌手 / 毎日 14:00 ～ 18:00\n- ポスコ奉仕団（ハーモニカ＆アコースティックギター）/（土）16:00 ～ 18:00、（日）18:00 ～ 20:00"
+ },
+ {
+  "id": "C-006",
+  "en": "Mar 28 (Fri) – Mar 30 (Sun), 2025 | Sculpture Park, 299-13 Geumho-ro, Gwangyang-si, Jeollanam-do | https://gwangyang.go.kr/tour/board.es?mid=a30601000000&bid=0044&act=view&list_no=180524",
+  "zh": "2025年3月28日（周五）~ 3月30日（周日）| 全罗南道光阳市 Geumho-ro 299-13 雕塑公园 | https://gwangyang.go.kr/tour/board.es?mid=a30601000000&bid=0044&act=view&list_no=180524",
+  "ja": "2025年3月28日（金）～3月30日（日）| 全羅南道光陽市 Geumho-ro 299-13 彫刻公園 | https://gwangyang.go.kr/tour/board.es?mid=a30601000000&bid=0044&act=view&list_no=180524"
+ },
+ {
+  "id": "C-007",
+  "en": "The 8th Gwangyang Millennium Camellia Festival",
+  "zh": "第8届光阳千年山茶花节",
+  "ja": "第8回 光陽千年椿祭り"
+ },
+ {
+  "id": "C-008",
+  "en": "Camellias bloom in the thousand-year-old forest",
+  "zh": "千年之林，山茶花开",
+  "ja": "千年の森に椿の花咲く"
+ },
+ {
+  "id": "C-009",
+  "en": "Apr 5 (Sat) – Apr 6 (Sun), 2025 | 423-1 Chusan-ri, Ongnyong-myeon, Gwangyang-si, Jeollanam-do | https://gwangyang.go.kr/tour/gallery.es?mid=a31205060100&bid=0011&act=view&list_no=14587",
+  "zh": "2025年4月5日（周六）~ 4月6日（周日）| 全罗南道光阳市玉龙面秋山里423-1 | https://gwangyang.go.kr/tour/gallery.es?mid=a31205060100&bid=0011&act=view&list_no=14587",
+  "ja": "2025年4月5日（土）～4月6日（日）| 全羅南道光陽市玉龍面秋山里423-1 | https://gwangyang.go.kr/tour/gallery.es?mid=a31205060100&bid=0011&act=view&list_no=14587"
+ },
+ {
+  "id": "C-010",
+  "en": "Baegunsan Guksabong Royal Azalea Festival",
+  "zh": "白云山国师峰杜鹃花节",
+  "ja": "白雲山国師峰ツツジ祭り"
+ },
+ {
+  "id": "C-011",
+  "en": "Hearts racing in Okgok — let's enjoy Gwangyang together!\n\n- Event: The 17th Baegunsan Guksabong Royal Azalea Festival\n- Slogan: Hearts racing in Okgok — let's enjoy Gwangyang together!\n- Theme: Love, joy, happiness, and healing!\n- Dates: Apr 19 (Sat) – Apr 20 (Sun), 2025 <2 days>\n- Venue: Okguseul Health & Culture Center plaza (next to Okgok-myeon Office) and the Guksabong area\n- Hosted/Organized by: Baegunsan Guksabong Royal Azalea Festival Promotion Committee\n- Sponsors: Gwangyang City, Gwangyang Dongbu NongHyup, Okgok Post Office, MG Gwangyang Saemaeul Geumgo, K-water (Korea Water Resources Corporation), Singeum Industrial Complex Council\n\n \n* Operations Center & Headquarters\n- Operating period: Apr 19 (Sat) – Apr 20 (Sun), 2025\n- Location: Headquarters next to the main stage · Okgok-myeon Office",
+  "zh": "心跳加速的玉谷，一起来光阳吧！\n\n- 活动名称：第17届白云山国师峰杜鹃花节\n- 口号：心跳加速的玉谷，一起来光阳吧！\n- 主题：爱、喜悦、幸福与疗愈！\n- 时间：2025年4月19日（周六）~ 2025年4月20日（周日）<共2天>\n- 地点：玉珠健康文化中心广场（玉谷面事务所旁）及国师峰一带\n- 主办/承办：白云山国师峰杜鹃花节推进委员会\n- 赞助机构：光阳市、光阳东部农协、玉谷邮局、MG光阳新村金库、韩国水资源公社、新琴产业园区协议会\n\n \n* 综合指挥室及主席台运营\n- 运营时间：2025年4月19日（周六）~ 4月20日（周日）\n- 设置地点：主舞台旁主席台·玉谷面事务所",
+  "ja": "ドキドキの玉谷、一緒に楽しもう光陽！\n\n- イベント名：第17回 白雲山国師峰ツツジ祭り\n- スローガン：ドキドキの玉谷、一緒に楽しもう光陽！\n- テーマ：愛、喜び、幸せ、そして癒し！\n- 期間：2025年4月19日（土）～2025年4月20日（日）<2日間>\n- 場所：オックスル健康文化センター広場（玉谷面事務所横）および国師峰一帯\n- 主催/主管：白雲山国師峰ツツジ祭り推進委員会\n- 後援機関：光陽市、光陽東部農協、玉谷郵便局、MG光陽セマウル金庫、韓国水資源公社、新琴産業団地協議会\n\n \n* 総合状況室および本部席の運営\n- 運営期間：2025年4月19日（土）～4月20日（日）\n- 設置場所：メインステージ横の本部席・玉谷面事務所"
+ },
+ {
+  "id": "C-012",
+  "en": "Apr 19 (Sat) – Apr 20 (Sun), 2025 | Guksabong Land, 433 Daechi-ro, Okgok-myeon, Gwangyang-si, Jeollanam-do | https://gwangyang.go.kr/tour/gallery.es?mid=a31205030100&bid=0011&act=view&list_no=14474",
+  "zh": "2025年4月19日（周六）~ 4月20日（周日）| 全罗南道光阳市玉谷面 Daechi-ro 433 国师峰乐园 | https://gwangyang.go.kr/tour/gallery.es?mid=a31205030100&bid=0011&act=view&list_no=14474",
+  "ja": "2025年4月19日（土）～4月20日（日）| 全羅南道光陽市玉谷面 Daechi-ro 433 国師峰ランド | https://gwangyang.go.kr/tour/gallery.es?mid=a31205030100&bid=0011&act=view&list_no=14474"
+ },
+ {
+  "id": "C-013",
+  "en": "The 24th Gwangyang Jeoneo (Gizzard Shad) Festival",
+  "zh": "第24届光阳斑鰶鱼节",
+  "ja": "第24回 光陽コノシロ（チョノ）祭り"
+ },
+ {
+  "id": "C-014",
+  "en": "A starry night! A seaside feast brought by jeoneo\n\n- Event: The 24th Gwangyang Jeoneo (Gizzard Shad) Festival\n- Slogan: A starry night! A seaside feast brought by jeoneo\n- Dates: Sep 12 (Fri) – Sep 14 (Sun), 2025 (3 days)\n- Venue: Mangdeok Port area, Jinwol-myeon, Gwangyang-si\n- Opening ceremony: Sep 13, 2025 (Sat) 18:30 (evening)\n- Gwangyang Jeoneo Song Festival grand prize: KRW 1,000,000 (gift vouchers)\n- Hosted/Organized by: Gwangyang Jeoneo Festival Promotion Committee\n- Sponsors: Jinwol-myeon Development Council, Jinwol-myeon Youth Association, Jinwol-myeon Village Heads Council, and others",
+  "zh": "数星星的夜晚！斑鰶鱼带来的海洋盛宴\n\n- 活动名称：第24届光阳斑鰶鱼节\n- 口号：数星星的夜晚！斑鰶鱼带来的海洋盛宴\n- 时间：2025年9月12日（周五）~ 9月14日（周日）（共3天）\n- 地点：光阳市津月面望德浦口一带\n- 开幕式：2025年9月13日（周六）晚上18:30\n- 光阳斑鰶鱼歌谣节冠军奖金100万韩元（商品券）\n- 主办/承办：光阳斑鰶鱼节推进委员会\n- 赞助：津月面发展协议会、津月面青年会、津月面里长协议会等",
+  "ja": "星を数える夜！コノシロが届ける海の饗宴\n\n- イベント名：第24回 光陽コノシロ（チョノ）祭り\n- スローガン：星を数える夜！コノシロが届ける海の饗宴\n- 期間：2025年9月12日（金）～9月14日（日）（3日間）\n- 場所：光陽市津月面 望徳浦口一帯\n- 開幕式：2025年9月13日（土）夜18:30\n- 光陽コノシロ歌謡祭 優勝賞金100万ウォン（商品券）\n- 主催/主管：光陽コノシロ祭り推進委員会\n- 後援：津月面発展協議会、津月面青年会、津月面里長協議会など"
+ },
+ {
+  "id": "C-015",
+  "en": "Sep 12 (Fri) – Sep 14 (Sun), 2025 (3 days) | Mangdeok Port, 68-14 Seonsojungang-gil, Jinwol-myeon, Gwangyang-si, Jeollanam-do | https://gwangyang.go.kr/tour/gallery.es?mid=a31205040000&bid=0011&act=view&list_no=14473",
+  "zh": "2025年9月12日（周五）~ 9月14日（周日）（共3天）| 全罗南道光阳市津月面 Seonsojungang-gil 68-14 望德浦口 | https://gwangyang.go.kr/tour/gallery.es?mid=a31205040000&bid=0011&act=view&list_no=14473",
+  "ja": "2025年9月12日（金）～9月14日（日）（3日間）| 全羅南道光陽市津月面 Seonsojungang-gil 68-14 望徳浦口 | https://gwangyang.go.kr/tour/gallery.es?mid=a31205040000&bid=0011&act=view&list_no=14473"
+ },
+ {
+  "id": "C-016",
+  "en": "The 21st Gwangyang Traditional Charcoal Barbecue Festival (2025)",
+  "zh": "2025年第21届光阳传统炭火烤肉节",
+  "ja": "2025年 第21回 光陽伝統炭火焼肉祭り"
+ },
+ {
+  "id": "C-017",
+  "en": "A feast of flavor and nostalgia blooming over charcoal\n\n- Festival: The 21st Gwangyang Traditional Charcoal Barbecue Festival\n- Theme: A feast of flavor and nostalgia blooming over charcoal\n- Dates: Oct 24 (Fri) – Oct 26 (Sun), 2025 [3 days]\n※ Opening ceremony: Oct 24, 2025 (Fri) 19:00\n- Venue: Seocheon Riverside area, Gwangyang-eup\n- Highlights: Opening ceremony, performances, exhibitions, hands-on & participatory programs, and more",
+  "zh": "炭火中绽放的美味与思念盛宴\n\n- 节庆名称：第21届光阳传统炭火烤肉节\n- 主题：炭火中绽放的美味与思念盛宴\n- 节庆时间：2025年10月24日（周五）~ 10月26日（周日）[共3天]\n※ 开幕式：2025年10月24日（周五）19:00\n- 节庆地点：光阳邑西川边一带\n- 主要内容：开幕式、演出、展览、体验及参与项目等",
+  "ja": "炭火の中に咲く味と懐かしさの饗宴\n\n- 祭り名称：第21回 光陽伝統炭火焼肉祭り\n- テーマ：炭火の中に咲く味と懐かしさの饗宴\n- 開催期間：2025年10月24日（金）～10月26日（日）[3日間]\n※ 開幕式：2025年10月24日（金）19:00\n- 開催場所：光陽邑 西川辺一帯\n- 主な内容：開幕式、公演、展示、体験＆参加プログラムなど"
+ }
+]
