@@ -68,6 +68,15 @@ gwangyangpang/
 └─ tools/                          ← 데이터를 다시 만드는 스크립트
 ```
 
+### GitHub
+
+| 내용 | 링크 |
+|---|---|
+| 사이트 바로 보기 (GitHub Pages) | https://ryan-claude-ai.github.io/gwangyangpang-i18n/ |
+| 저장소 (공개) | https://github.com/ryan-claude-ai/gwangyangpang-i18n |
+
+`main` 브랜치에 푸시하면 GitHub Pages가 1~2분 안에 자동으로 다시 배포합니다. 저장소 루트의 `index.html`은 `site/`로 이동만 시킵니다.
+
 ### 공유 링크 (claude.ai, 현재 비공개)
 
 | 내용 | 링크 |
